@@ -9,12 +9,14 @@ const ingredients = [
 
 const ingredientsListRef = document.querySelector("#ingredients");
 
-const ingredientsListMarkup = ingredients.forEach((ingredient) => {
+const ingredientsListMarkup = ingredients.map((ingredient) => {
   const listItem = document.createElement("li");
   listItem.classList.add("item");
   listItem.textContent = ingredient;
-  ingredientsListRef.append(listItem);
+  return listItem;
 });
+
+ingredientsListRef.append(...ingredientsListMarkup);
 
 //-----------------------------------------------------------------//
 // const ingredientsListMarkupMaker = function (ingredientsArr) {

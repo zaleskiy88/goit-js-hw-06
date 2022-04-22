@@ -11,7 +11,8 @@ function onSubmit(event) {
     event.currentTarget.elements.email.value === "" ||
     event.currentTarget.elements.password.value === ""
   ) {
-    return window.alert("Attention! All form fields must be filled!");
+    window.alert("Attention! All form fields must be filled!");
+    return event.currentTarget.reset();
   }
 
   const formData = new FormData(event.currentTarget);
