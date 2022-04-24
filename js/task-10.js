@@ -21,7 +21,6 @@ function createBoxes(amount) {
   }
 }
 
-refs.numberInput.addEventListener("change", (event) => {
-  createBoxes(event.currentTarget.value);
-  //console.log(Number(event.currentTarget.value));
+refs.numberInput.addEventListener("input", (event) => {
+  console.log(event.currentTarget.value);
 });

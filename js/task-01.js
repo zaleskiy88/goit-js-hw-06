@@ -1,12 +1,10 @@
 const categoriesList = document.querySelector("#categories");
 const categoriesListItems = document.querySelectorAll(".item");
 
-const categoriesLogger = (listItems, fu) => {
+const categoriesLogger = (listItems) => {
   listItems.forEach((item) => {
     console.log(`Category: ${item.firstElementChild.textContent}`);
-    console.log(
-      `Elements: ${item.firstElementChild.nextElementSibling.children.length}`
-    );
+    console.log(`Elements: ${item.lastElementChild.children.length}`);
   });
 };
 
